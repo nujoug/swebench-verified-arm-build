@@ -11,6 +11,7 @@
 
 # Usage:
 #   sbatch launch_arm_build.slurm                  # full build + push
+#   sbatch launch_arm_build.slurm --verify true    # verify with gold patch before push
 #   sbatch launch_arm_build.slurm --retry_failed   # retry only previously failed instances
 #   sbatch launch_arm_build.slurm --env_only       # build env images only (for debugging)
 
@@ -55,16 +56,6 @@ python3 -m swebench.harness.prepare_images \
     --state_file "${STATE_FILE}" \
     --registry "${REGISTRY}" \
     "${EXTRA_ARGS[@]}"
-
-python -m swebench.harness.prepare_images \
-  --dataset_name princeton-nlp/SWE-bench_Verified \
-  --instance_ids_file fixable_instances.txt \
-  --arch arm64 \
-  --max_workers 4 \
-  --state_file build_state.json \
-  --registry "${REGISTRY}" \
-  --verify true \
-  --force_rebuild true
 
 EXIT_CODE=$?
 
