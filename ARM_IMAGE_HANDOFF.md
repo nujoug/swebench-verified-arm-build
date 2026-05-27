@@ -1,0 +1,25 @@
+# SWE-bench Verified ARM Image Handoff
+
+This repo contains the ARM64 build wrapper and instance lists for `princeton-nlp/SWE-bench_Verified`.
+
+## Build
+
+```bash
+export REGISTRY=registry.example.com/namespace/swe-bench
+
+python3 -m swebench.harness.prepare_images \
+  --dataset_name princeton-nlp/SWE-bench_Verified \
+  --instance_ids_file swebench_verified_instances.txt \
+  --arch arm64 \
+  --max_workers 8 \
+  --state_file build_state.json \
+  --registry "${REGISTRY}"
+```
+
+For Slurm:
+
+```bash
+REGISTRY=registry.example.com/namespace/swe-bench sbatch launch_arm_build.slurm
+```
+
+Failed-instance lists are under `handoff/failed_instances/`.

@@ -1,0 +1,21 @@
+instance_id	status	error
+astropy__astropy-8707	failed	Error building image sweb.eval.arm64.astropy__astropy-8707:latest: The command '/bin/sh -c /bin/bash /root/setup_repo.sh' returned a non-zero code: 1
+Check (logs/build_images/instances/sweb.eval.arm64.astropy__astropy-8707__latest/build_image.log) for more information.
+astropy__astropy-8872	failed	Error building image sweb.eval.arm64.astropy__astropy-8872:latest: The command '/bin/sh -c /bin/bash /root/setup_repo.sh' returned a non-zero code: 1
+Check (logs/build_images/instances/sweb.eval.arm64.astropy__astropy-8872__latest/build_image.log) for more information.
+django__django-10097	failed	env image build failed: env image sweb.env.py.arm64.ebb253eb6c98bea7230de3:latest failed to build
+matplotlib__matplotlib-20826	verify_failed	
+matplotlib__matplotlib-22865	verify_failed	
+matplotlib__matplotlib-23314	verify_failed	
+matplotlib__matplotlib-23476	verify_failed	
+matplotlib__matplotlib-24026	verify_failed	
+matplotlib__matplotlib-24149	verify_failed	
+matplotlib__matplotlib-24177	verify_failed	
+matplotlib__matplotlib-24627	verify_failed	
+matplotlib__matplotlib-24870	verify_failed	
+matplotlib__matplotlib-26113	verify_failed	
+matplotlib__matplotlib-26208	verify_failed	
+pydata__xarray-3305	verify_failed	
+pydata__xarray-4356	verify_failed	
+pydata__xarray-4695	verify_failed	
+pydata__xarray-6992	verify_failed	
